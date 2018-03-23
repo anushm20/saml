@@ -45,7 +45,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .apply(saml())
                 .serviceProvider()
                     .keyStore()
-                        .storeFilePath("keystore/keystore.jks")
+                        .storeFilePath(keyStoreFilePath)
                         .password(this.password)
                         .keyname(this.keyAlias)
                         .keyPassword(this.password)
